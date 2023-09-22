@@ -1,0 +1,5 @@
+{
+  "i18nStyle": {
+    "message": "/* i18n styles */\n\nhtml, body { direction: rtl; }\n\n"
+  }
+}

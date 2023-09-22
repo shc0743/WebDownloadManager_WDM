@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link rel="stylesheet" href="/lib/element-plus/element-ui.css">
+    <link rel="stylesheet" href="./static/site.css">
+    <link rel="stylesheet" href="./popup1.css">
+    <script type="module" src="./static/el-native-proxy.js"></script>
+    <script type="module" src="./static/i18n.js"></script>
+</head>
+<body>
+    <h1 style="margin-top: 0; text-align: center;" data-i18n=Download></h1>
+    <p style="font-size: large;">
+        <a href="/web/index.html" target="_blank" data-i18n="All_Tasks"></a>
+        <span>|</span>
+        <a href="/web/download_tool.html" target="_blank" data-i18n="Download_Tool"></a>
+    </p>
+    <details data-from="url" open>
+        <summary>From URL</summary>
+        <div class="content">
+            <input id="d0" type="url" class="full-line el-input__inner" required>
+            <div style="text-align: right; margin-top: 0.5em;"><button class="el-button el-button--primary is-plain" id="download" data-i18n="Download"></button></div>
+        </div>
+    </details>
+    <details data-from="page" open>
+        <summary>From page</summary>
+        <div class="" style="max-height: 20em; overflow: auto">
+            <div>
+                <button id="findResource" class="el-button el-button--small disp-block disp-full" data-i18n="findResource">Find resources in the page</button>
+            </div>
+
+            <div id="resources" class="resources-area"><span data-i18n="resources_init_placeholder"></span></div>
+        </div>
+    </details>
+    
+    <script type="module" src="./popup1.js"></script>
+</body>
+</html>

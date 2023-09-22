@@ -1,0 +1,35 @@
+
+.res-list-item {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #7f7f7f;
+    overflow: hidden;
+}
+.res-list-item+.res-list-item {
+    margin-top: 0.5em;
+}
+.res-list-content-container {
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
+    margin-right: 0.5em;
+}
+.res-list-content-container > * {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.resources-area:empty::before {
+    content: "__MSG_friot_empty_string__";
+}
+.res-list-content.is-title {
+    font-size: larger;
+    font-weight: bold;
+}
+.res-list-content.is-url {
+    color: gray;
+    user-select: all;
+}
+
+

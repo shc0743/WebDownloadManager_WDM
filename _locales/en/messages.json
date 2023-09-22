@@ -1,0 +1,268 @@
+{
+  "extName": {
+    "message": "Web Download Manager",
+    "description": "The name of the extension."
+  },
+  "extDesc": {
+    "message": "A Simple Multithreaded Download Manager in Web Browser",
+    "description": "The description of the extension."
+  },
+  "userFontFamily": {
+    "message": "'Consolas', 'Courier New', monospace"
+  },
+  "i18nStyle": {
+    "message": "/* i18n styles */\n\nhtml, body { direction: ltr; }\n\n"
+  },
+  "ctxMenu_2_title_1": {
+    "message": "Download File"
+  },
+  "ctxMenu_2_title_2": {
+    "message": "Download Image"
+  },
+  "ctxMenu_2_title_3": {
+    "message": "Download Resource"
+  },
+  "ctxMenu_3_title_1": {
+    "message": "Run platform parser"
+  },
+  "ctxMenu_3_title_2": {
+    "message": "Run platform parser for the link"
+  },
+  "uninstallSelfPrompt": {
+    "message": "Are you sure you want to uninstall the extension?"
+  },
+  "choosedefaultdownloaddirectory_text2": {
+    "message": "You didn't choose the default directory to save your download files. Click me to choose it now."
+  },
+  "createDownloadTask": {
+    "message": "Create Download Task"
+  },
+  "GenericSettings": {
+    "message": "Generic Settings"
+  },
+  "Enablenotifications": {
+    "message": " Enable notifications"
+  },
+  "Senddownloadcompletionnotificationsforalltasks": {
+    "message": " Send download completion notifications for all tasks"
+  },
+  "Showrecommendedsbyaccessingyourtopsites": {
+    "message": " Show recommendeds by accessing your top-sites"
+  },
+  "Runextensioninbackground": {
+    "message": " Run extension in background (for example, download files after browser closed)"
+  },
+  "PermissionSettings": {
+    "message": "Permission Settings"
+  },
+  "settings_sl_title": {
+    "message": "These items are lazy-rendering; if there's nothing or render error, please doubleclick this text"
+  },
+  "Settings": {
+    "message": "Settings"
+  },
+  "enablealloptionalpermissions": {
+    "message": " Enable <b style=\"color: red;\">all</b> optional permissions"
+  },
+  "ContextMenuSettings": {
+    "message": "Context Menu Settings"
+  },
+  "ContextMenuSettings_0": {
+    "message": " Do not enable contextmenu"
+  },
+  "ContextMenuSettings_1": {
+    "message": " Enable contextmenu"
+  },
+  "ContextMenuSettings_2": {
+    "message": " Enable enhanced contextmenu"
+  },
+  "ReloadExtension": {
+    "message": "Reload Extension"
+  },
+  "UninstExtension": {
+    "message": "Uninstall..."
+  },
+  "Download": {
+    "message": "Download"
+  },
+  "All_Tasks": {
+    "message": "Details"
+  },
+  "Download_Tool": {
+    "message": "Download Tool"
+  },
+  "findResource": {
+    "message": "Find resources in the page"
+  },
+  "crTask_paste_tip": {
+    "message": "Press Shift and click to reset this feature."
+  },
+  "crTask_paste0": {
+    "message": "Enable\nAuto-Paste"
+  },
+  "crTask_paste1": {
+    "message": "Paste"
+  },
+  "Filename": {
+    "message": "Filename"
+  },
+  "Save_to": {
+    "message": "Save to"
+  },
+  "dontaskmeagain": {
+    "message": "Don't ask me again"
+  },
+  "Single_thread": {
+    "message": "Single thread"
+  },
+  "Senddownloadcompletionnotifications": {
+    "message": "Send download completion notifications"
+  },
+  "Usesystemdownloader": {
+    "message": "Use system downloader"
+  },
+  "Cancel": {
+    "message": "Cancel"
+  },
+  "Save_to_": {
+    "message": "Save to:"
+  },
+  "Close": {
+    "message": "Close"
+  },
+  "DefaultLocation": {
+    "message": "Default Location"
+  },
+  "Select_Location___": {
+    "message": "Select Location..."
+  },
+  "advancedOptions": {
+    "message": "Advanced Options"
+  },
+  "crTask_paste2": {
+    "message": "Failed: No valid URL\nfound in your clipboard."
+  },
+  "createTask": {
+    "message": "Create Task"
+  },
+  "index_html_Status": {
+    "message": "Status"
+  },
+  "Operations": {
+    "message": "Operations"
+  },
+  "Save_Location": {
+    "message": "Save Location"
+  },
+  "URL": {
+    "message": "URL"
+  },
+  "Time": {
+    "message": "Time"
+  },
+  "explainGlobalSelection": {
+    "message": "[Global Selection] explains\n\n[Global Selection] is a feature that allows you to modify very lot of data. Defaultly, the checkboxes only influence the current page. If you change to next page with the pager, checkes that you did will be no longer available. However, if you activate the \"Global Selection\", every data will be checked, regardless of the page. If the \"Global Selection\" is active, any multiple operations, such as delete, will influence all datas in the database. For example, if you activate the \"Global Selection\" and click Delete, all datas will be deleted. The pager will be ignored.\n\nTo activate the \"Global Selection\":\n    When a checkbox is not checked in the data list, click me will check them in one go. When every checkbox is checked, click me will activate the \"Global Selection\"."
+  },
+  "Delete": {
+    "message": "Delete"
+  },
+  "explainexplainGlobalSelection": {
+    "message": "Click me to learn more about [Global Selection]."
+  },
+  "explainGlobalSelectionBox": {
+    "message": "[Global Selection]"
+  },
+  "FindresourcesinothertabTab": {
+    "message": "Tab:"
+  },
+  "Findresourcesinothertab": {
+    "message": "Find resources in other tab"
+  },
+  "Findresourcesinothertabselect": {
+    "message": "Select..."
+  },
+  "FindresourcesinothertabUnselected": {
+    "message": "unselected"
+  },
+  "Parseresourcesinlink": {
+    "message": "Run platform parser for the special link"
+  },
+  "OK": {
+    "message": "OK"
+  },
+  "resources_init_placeholder": {
+    "message": "Click the button above to find resources in the page."
+  },
+  "friot_empty_string": {
+    "message": "Nothing Found"
+  },
+  "LocationSettings": {
+    "message": "Location Settings"
+  },
+  "LocationSettings_choose": {
+    "message": "Choose"
+  },
+  "LocationSettings_clear": {
+    "message": "Clear"
+  },
+  "Default_download_location": {
+    "message": "Default download location:"
+  },
+  "Systemdownloaderdefaultloction": {
+    "message": "System downloader default loction:"
+  },
+  "Saved_Locations": {
+    "message": "Saved Locations"
+  },
+  "sl_RemoveTip": {
+    "message": "Click an item to remove it from Saved Locations"
+  },
+  "sl_RemoveAll": {
+    "message": "Clear All"
+  },
+  "StorageSettings": {
+    "message": "Storage Settings"
+  },
+  "clearStorage_bg": {
+    "message": " Clear <b style=\"color: red;\">all data</b> in <b style=\"color: blue\">extension background storage area</b>"
+  },
+  "clearStorage_db": {
+    "message": " Delete <b style=\"color: red;\">all databases</b> in <b style=\"color: blue\">extension storage area</b>"
+  },
+  "Managements": {
+    "message": "Managements"
+  },
+  "Open": {
+    "message": "Open"
+  },
+  "dtParsing": {
+    "message": "Parsing..."
+  },
+  "dtParse": {
+    "message": "Parse"
+  },
+  "d_Start": {
+    "message": "Start"
+  },
+  "d_PauseResume": {
+    "message": "Pause"
+  },
+  "d_Stop": {
+    "message": "Stop"
+  },
+  "d_Cancel": {
+    "message": "Cancel"
+  },
+  "platformParse_supportedPlatforms": {
+    "message": "Supported platforms"
+  },
+  "index_html_Progress": {
+    "message": "Progress"
+  },
+  "videoDownload_choosequality": {
+    "message": "Choose Quality"
+  },
+  "videoDownload_choosequality_q": {
+    "message": "Quality: "
+  }
+}

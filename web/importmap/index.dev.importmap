@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@/": "./",
+    "vue": "/lib/vue/vue.esm-browser.js",
+    "idb": "/lib/idb/idb.esm.js",
+    "element-plus": "/lib/element-plus/index.full.mjs.js",
+    "element-plus/": "/lib/element-plus/",
+  }
+}

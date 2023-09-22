@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eWidget</title>
+    <link rel="stylesheet" href="./static/site.css">
+    <link rel="stylesheet" href="/lib/element-plus/element-ui.css">
+    <script type="module" src="./static/userdata.js"></script>
+    <script type="module" src="./static/btn2link.js"></script>
+</head>
+<body>
+
+    <dialog id="app" class="dialog-app" data-close="cancel">
+        <div id="contents"></div>
+        <div id="btns">
+            <button type="button" class="el-button el-button--primary is-plain" data-close data-btn2link-url="./index.html" data-btn2link-target="_blank">Show All</button>
+            <button class="el-button el-button--text" data-close="click">x</button>
+        </div>
+    </dialog>
+
+    <style>
+#app {
+    display: flex;
+}
+#contents {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#btns {
+    display: flex;
+    padding-left: 1em;
+    border-left: 1px solid;
+}
+.task--is_task.task--task_item-wrapper {
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    transition: .1s;
+    background-color: white;
+    box-sizing: border-box;
+    height: 100%;
+    align-items: stretch;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.task--is_task.task--task_item-wrapper:hover, 
+.task--is_task.task--task_item-wrapper:focus {
+    cursor: pointer;
+    background-color: #f4f4f4;
+}
+.task--is_task.task--task_item-wrapper:active {
+    background-color: #e7e7e7;
+}
+.task--is_task.task--task_item-wrapper+.task--task_item-wrapper {
+    margin-left: 1em;
+}
+.task--is_task.task--task_item-title {
+    font-size: large;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-height: 1em;
+    margin-bottom: 5px;
+    flex-shrink: 0;
+}
+.task--is_task.task--task_item-url {
+    color: gray;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow: hidden;
+}
+    </style>
+    
+    <script type="module" src="./eWidget-DownloadBottomBar.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "id": 3904,
+      "priority": 1,
+      "action": {
+        "type": "redirect",
+        "redirect": {
+          "extensionPath": "/web/redirect.html"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://github.com/shc0743/WebDownloadManager_WDM/blob/main/assets/textures/entry",
+        "resourceTypes": [
+          "main_frame"
+        ]
+      }
+    },
+    {
+      "id": 3001,
+      "priority": 100,
+      "condition": {
+        "regexFilter": "^https://b23.tv/",
+        "resourceTypes": [
+          "xmlhttprequest",
+          "ping",
+          "other"
+        ]
+      },
+      "action": {
+        "type": "modifyHeaders",
+        "responseHeaders": [
+          {
+            "header": "access-control-allow-origin",
+            "value": "*",
+            "operation": "set"
+          },
+          {
+            "header": "location",
+            "operation": "remove"
+          },
+          {
+            "header": "x-is-modified-by-wdm",
+            "value": "true",
+            "operation": "append"
+          }
+        ]
+      }
+    }
+  ]
+}

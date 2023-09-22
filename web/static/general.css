@@ -1,0 +1,30 @@
+
+
+@import url(./default-ui.css);
+
+
+.full-line {
+    width: 100%;
+    box-sizing: border-box;
+}
+.disp-block {
+    display: block;
+}
+.disp-full {
+    box-sizing: border-box;
+    width: 100%;
+}
+.disp-flex {
+    display: flex;
+}
+.disp-flex.flex-col {
+    flex-direction: column;
+}
+.flex-1 {
+    flex: 1;
+}
+
+
+
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Download Task</title>
+    <link rel="stylesheet" href="/lib/element-plus/element-ui.css">
+    <link rel="stylesheet" href="./static/site.css">
+    <style>.el-input__inner.is-disabled {background-color: #F5F7FA;border-color: #E4E7ED;color: #C0C4CC}</style>
+    <script type="module" src="./static/el-native-proxy.js"></script>
+    <script type="module" src="./static/userdata.js"></script>
+    <script type="module" src="./static/i18n.js"></script>
+</head>
+<body>
+    <style>
+    body { font-size: revert; }
+    .center {
+        text-align: center;
+    }
+    .el-form-item {
+        margin-bottom: 8px;
+    }
+    #form.is-ext-mode .hide-in-ext-mode {
+        display: none;
+    }
+    #form details .el-form-item__label,
+    #form details .el-form-item__content {
+        line-height: 2em;
+    }
+    </style>
+    <dialog id="app" class="dialog-app">
+        <h1 class="center" data-i18n="createDownloadTask" style="margin-top: 0.5em;">Create Download Task</h1>
+
+        <form id="form" class="el-form">
+            <div class="el-form-item">
+                <label class="el-form-item__label" for="dlink" style="width: 80px;">URL</label>
+                <div class="el-form-item__content" style="margin-left: 80px; display: flex;">
+                    <div class="el-input"><input type="url" required class="el-input__inner" id="dlink"></div>
+                    <button type="button" class="el-button el-button--mini" style="margin-left: 1em;" id="enablePaste" data-i18n-title="crTask_paste_tip" data-i18n="crTask_paste0"></button>
+                </div>
+            </div>
+
+            <div class="el-form-item hide-in-ext-mode">
+                <label class="el-form-item__label" for="dname" style="width: 80px;" data-i18n="Filename"></label>
+                <div class="el-form-item__content" style="margin-left: 80px; display: flex;">
+                    <div class="el-input"><input type="text" class="el-input__inner" id="dname"></div>
+                </div>
+            </div>
+
+            <div class="el-form-item hide-in-ext-mode hide-in-sys-mode">
+                <label class="el-form-item__label" for="dsave" style="width: 80px;" data-i18n="Save_to">Save to</label>
+                <div class="el-form-item__content" style="margin-left: 80px; display: flex;">
+                    <div class="el-input"><input type="text" readonly class="el-input__inner" id="dsave"></div>
+                </div>
+            </div>
+
+            <details class="el-form-item">
+                <summary data-i18n="advancedOptions"></summary>
+                <div class="hide-in-ext-mode hide-in-sys-mode">
+                    <label class="el-form-item__label" style="width: 80px;">
+                        <input type="checkbox" id="noask">
+                    </label>
+                    <label class="el-form-item__content" style="margin-left: 80px; display: block;" for="noask">
+                        <span data-i18n="dontaskmeagain">Don't ask me again</span>
+                    </label>
+                </div>
+                
+                <div class="hide-in-ext-mode hide-in-sys-mode">
+                    <label class="el-form-item__label" style="width: 80px;">
+                        <input type="checkbox" id="singlethread">
+                    </label>
+                    <label class="el-form-item__content" style="margin-left: 80px; display: block;" for="singlethread">
+                        <span data-i18n="Single_thread"></span>
+                    </label>
+                </div>
+                
+                <div class="hide-in-ext-mode hide-in-sys-mode">
+                    <label class="el-form-item__label" style="width: 80px;">
+                        <input type="checkbox" id="sendnotify">
+                    </label>
+                    <label class="el-form-item__content" style="margin-left: 80px; display: block;" for="sendnotify">
+                        <span data-i18n="Senddownloadcompletionnotifications"></span>
+                    </label>
+                </div>
+                
+                <div>
+                    <label class="el-form-item__label" style="width: 80px;">
+                        <input type="checkbox" id="usesysdl">
+                    </label>
+                    <label class="el-form-item__content" style="margin-left: 80px; display: block;" for="usesysdl">
+                        <span id="usesysdl1" data-i18n="Usesystemdownloader"></span>
+                    </label>
+                </div>
+            </details>
+
+            <div class="el-form-item" style="text-align: right;">
+                <button type="submit" id="submitBtn" class="el-button el-button--primary is-plain"><span data-i18n="Download">Download</span></button>
+                <button type="button" id="cancel" class="el-button el-button--danger is-plain"><span data-i18n="Cancel">Cancel</span></button>
+            </div>
+
+
+        </form>
+        
+    </dialog>
+
+    <dialog id="selectSaveLocationDlg">
+        <h2 style="margin-top: 0;" data-i18n="Save_to_"></h2>
+        <div id="slcList">
+            <div><a href="#nop" id="closeSLD" data-i18n="Close">Close</a></div>
+            <div><a href="#nop" data-loc="default" data-i18n="DefaultLocation"></a></div>
+            <div><a href="#nop" id="selectSaveLocation" data-i18n="Select_Location___"></a></div>
+            <div id="slcList_placeHolder" style="word-break: break-all;"></div>
+        </div>
+    </dialog>
+
+    <dialog id="errorDlg"><form method="dialog">
+        <div style="font-size: x-large; color: red; text-align: center;">Error</div><hr>
+        <pre id="errorDetails" style="word-break: break-all; white-space: pre-wrap;"></pre>
+        <hr><div style="text-align: right;">
+            <button type="submit" class="el-button--primary is-plain">Close</button>
+        </div>
+    </form></dialog>
+
+    <script type="module" src="./create_task.js"></script>
+    
+</body>
+</html>

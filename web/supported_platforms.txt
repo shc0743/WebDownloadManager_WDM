@@ -1,0 +1,3 @@
+Bilibili (哔哩哔哩) https://www.bilibili.com/video/* | https://www.bilibili.com/*/*?(aid|bvid)=*
+Bilibili Shortlink (哔哩哔哩短链接) (b23.tv) https://b23.tv/*
+We're still trying to adapt to more platforms... | 更多平台努力适配中,敬请期待...

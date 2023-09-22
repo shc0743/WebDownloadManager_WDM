@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Tool</title>
+    <link rel="stylesheet" href="/lib/element-plus/element-ui.css">
+    <link rel="stylesheet" href="./static/site.css">
+    <script type="module" src="./static/el-native-proxy.js"></script>
+    <script type="module" src="./static/userdata.js"></script>
+    <script type="module" src="./static/i18n.js"></script>
+    <script type="module" src="./static/btn2link.js"></script>
+    <link rel="stylesheet" href="./popup1-1.css">
+    <style>
+body {font-size: revert;}       
+body>details+details {
+    margin-top: 1em;
+}
+body>details>.content {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+}
+#friot_tabchoose[open], #friot_tabchoose > form {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#friot_container {
+    word-break: break-all;
+    border: 1px solid;
+    padding: 1em;
+    border-radius: 10px;
+    overflow: auto;
+}
+.friot-item-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: inherit;
+}
+.friot-item-container+.friot-item-container {
+    margin-top: 1em;
+}
+#friot_result[open] { display: flex; flex-direction: column; overflow: hidden; }
+#friot_resultarea { overflow: auto; }
+#friot_resultarea:not(:empty) { margin-top: 0.5em; }
+#friot_resultarea.loading::before { content: "Loading..."; }
+    </style>
+</head>
+<body>
+    
+    <details open>
+        <summary data-i18n=Findresourcesinothertab></summary>
+
+        <div class="content">
+            <b data-i18n="FindresourcesinothertabTab">Tab:</b>
+            <span data-i18n="FindresourcesinothertabUnselected"></span>
+            <a id="friot_btn" href="#nop" data-i18n="Findresourcesinothertabselect">Select...</a>
+        </div>
+
+        <dialog id="friot_tabchoose"><form method="dialog" id="friot_run">
+            <div><b>Choose Tab</b><span style="float: right;">[<button type="submit" style="all: unset; color: blue; text-decoration: underline; cursor: pointer;" formnovalidate>x</button>]</span></div>
+            <p id="friot_container">Loading...</p>
+            <div>
+                <button class="el-button el-button--primary is-plain" type="submit" data-i18n="OK" autofocus data-submit="true"></button>
+                <button class="el-button el-button--danger is-plain" type="submit" data-i18n="Cancel" formnovalidate></button>
+            </div>
+        </form></dialog>
+
+        <dialog id="friot_result">
+            <div id="friot_resultarea" class="resources-area"></div>
+            <form method="dialog" style="margin-top: 1em; display: flex; flex-direction: column;"><button class="el-button el-button--primary is-plain" type="submit" data-i18n="OK" autofocus></button></form>
+        </dialog>
+    </details>
+    
+    <details open>
+        <summary data-i18n="Parseresourcesinlink"></summary>
+
+        <form id="pr_form" class="content" style="display: flex; align-items: center;">
+            <b data-i18n="URL"></b><span>:</span>
+            <input type="url" id="pr_url" required class="el-input__inner" style="flex: 1; margin: 0 1em;">
+            <button id="pr_btn" type="submit" class="el-button el-button--primary is-plain" data-i18n="dtParse">Parse</button>
+        </form>
+
+        <details class="content" style="margin-top: 0.5em;">
+            <summary data-i18n="platformParse_supportedPlatforms"></summary>
+            <ul class="content" id="platformParse_supportedPlatforms" style="white-space: pre;"></ul>
+        </details>
+    </details>
+
+    <script type="module" src="./download_tool.js"></script>
+</body>
+</html>

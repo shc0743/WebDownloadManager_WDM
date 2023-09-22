@@ -1,0 +1,16 @@
+body {
+    font-size: revert;
+}
+
+#form details+details {
+    margin-top: 1em;
+}
+#form details>.content {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    overflow: auto;
+}
+#form label {
+    display: block;
+}

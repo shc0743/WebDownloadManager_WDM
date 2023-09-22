@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Download Manager</title>
+    <link rel="stylesheet" href="/lib/element-plus/element-plus.css">
+    <link rel="stylesheet" href="./static/site.css">
+    <script type="module" src="./static/el-native-proxy.js"></script>
+    <script type="module" src="./static/userdata.js"></script>
+    <script type="module" src="./static/i18n.js"></script>
+    <script type="module" src="./static/btn2link.js"></script>
+    <script type="module" src="./static/pager.js"></script>
+    <link rel="stylesheet" href="./index.html.css">
+</head>
+<body>
+    <dialog id="app" class="dialog-app">
+        <h1 data-i18n="extName" style="margin-top: 0; text-align: center;"></h1>
+
+        <header class="topbar topbar-menu">
+            <div class="topbar-area-1 topbar-content-container">
+                <button type="button" class="el-button el-button--primary is-plain" data-btn2link-target="popup" data-btn2link-window-size="640x480" data-btn2link-url="./create_task.html" data-i18n="createTask"></button>
+                <button type="button" class="el-button el-button--primary is-plain" data-btn2link-target="_blank" data-btn2link-url="./download_tool.html" data-i18n="Download_Tool"></button>
+                <button type="button" class="el-button el-button--primary is-plain" data-btn2link-target="_blank" data-btn2link-url="./settings.html" data-i18n="Settings"></button>
+                <button type="button" class="el-button el-button--info is-plain" id="generate_test_data" style="display: none;">Generate Test Data</button>
+            </div>
+
+            <div class="topbar-area-2 topbar-content-container">
+                <button type="button" class="el-button el-button--danger is-plain" id="task__delete" data-i18n="Delete"></button>
+            </div>
+
+            <div class="topbar-area-2 topbar-content-container" id="taskOperations">
+                <button type="button" class="el-button el-button--success is-plain" data-task-action="start" data-i18n="d_Start"></button>
+                <button type="button" class="el-button el-button--info is-plain" data-task-action="pause" data-i18n="d_PauseResume"></button>
+                <button type="button" class="el-button el-button--warning is-plain" data-task-action="stop" data-i18n="d_Stop"></button>
+                <button type="button" class="el-button el-button--danger is-plain" data-task-action="cancel" data-i18n="d_Cancel"></button>
+            </div>
+        </header>
+
+        <div id="main">
+            <div class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--enable-row-transition el-table--layout-fixed is-scrolling-none" style="flex: 1; overflow: auto;">
+                <table class="el-table__body" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+                    <thead style="color: #333">
+                        <td class="is-leaf el-table__cell" style="min-width: 3.5em;"><div class="cell">
+                            <input type="checkbox" id="download_data__checkAll" data-i18n-title="explainGlobalSelection" data-i18n-aria-label="explainGlobalSelectionBox">
+                            <button popovertarget="explainGlobalSelection" data-i18n-aria-label="explainexplainGlobalSelection" style="all: unset; cursor: pointer; position: relative; top: -5px; font-size: small; color: gray; display: inline-block; width: 0; overflow: visible;">?</button>
+                            <div popover id="download_data__checkAll_popover" style="position: relative; left: 1em; top: 12em; margin: 0;">[Global Selection] Enabled</div>
+                        </div></td>
+                        <td class="is-leaf el-table__cell" style="min-width: 8em;"><div class="cell">#</div></td>
+                        <td class="is-leaf el-table__cell" style="min-width: 16em; width: 100%;"><div class="cell" data-i18n="Filename"></div></td>
+                        <td class="is-leaf el-table__cell" style="min-width: 9em;"><div class="cell" data-i18n="Save_Location"></div></td>
+                        <td class="is-leaf el-table__cell" style="min-width: 7em;"><div class="cell" data-i18n="index_html_Status"></div></td>
+                        <td class="is-leaf el-table__cell" style="min-width: 7em;"><div class="cell" data-i18n="index_html_Progress"></div></td>
+                        <td class="is-leaf el-table__cell" style="max-width: 20em; min-width: 19em;"><div class="cell" data-i18n="URL"></div></td>
+                        <td class="is-leaf el-table__cell" style="min-width: 7.5em;"><div class="cell" data-i18n="Time"></div></td>
+                        <td class="is-leaf el-table__cell" style="min-width: 8em;"><div class="cell" data-i18n="Operations"></div></td>
+                    </thead>
+
+                    <tbody id="download_data" style="word-break: break-all; white-space: normal;"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="explainGlobalSelection" popover data-i18n="explainGlobalSelection"></div>
+
+        <my-pager id="app_pager" value="1" style="margin-top: 1em;"></my-pager>
+    </dialog>
+    <dialog id="loading_page">Loading...</dialog>
+
+    <dialog id="errorDlg"><form method="dialog">
+        <div style="font-size: x-large; color: red; text-align: center;">Error</div><hr>
+        <pre id="errorDetails" style="word-break: break-all; white-space: pre-wrap;"></pre>
+        <hr><div style="text-align: right;">
+            <button type="submit" class="el-button el-button--primary is-plain">Close</button>
+        </div>
+    </form></dialog>
+
+    <script type="module" src="./index.html.js"></script>
+</body>
+</html>

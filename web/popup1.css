@@ -1,0 +1,33 @@
+@import url(./popup1-1.css);
+
+
+html {
+    font-size: larger;
+}
+body {
+    width: 400px;
+}
+
+
+body>details+details {
+    margin-top: 1em;
+}
+body>details>.content {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+}
+
+
+#resources:not(:empty) {
+    margin-top: 0.5em;
+}
+#resources.loading::before {
+    content: "Loading...";
+}
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilivideo Download Gateway</title>
+    <link rel="stylesheet" href="/web/static/site.css">
+    <link rel="stylesheet" href="/lib/element-plus/element-ui.css">
+    <script type="module" src="/web/static/i18n.js"></script>
+    <script type="module" src="/web/static/el-native-proxy.js"></script>
+</head>
+<body>
+    <div id="progress" style="white-space: pre-wrap; word-break: break-all; font-family: Consolas, monospace;"></div>
+    <dialog id="param_q" style="width: 300px;">
+        <h1 style="margin-top: 0;" data-i18n="videoDownload_choosequality"></h1>
+        <form method="dialog">
+            <label style="display: flex; margin: 1em 0; align-items: center;">
+                <span style="margin-right: 1em; font-size: large;" data-i18n="videoDownload_choosequality_q"></span>
+                <select style="flex: 1;" class="el-input__inner" id="qualities"></select>
+            </label>
+
+            <div style="text-align: right;">
+                <button type="submit" class="el-button el-button--primary is-plain" data-i18n="OK"></button>
+                <button type="reset" class="el-button el-button--danger is-plain" data-i18n="Cancel"></button>
+            </div>
+        </form>
+    </dialog>
+    <script type="module" src="./bilivideo.js"></script>
+</body>
+</html>

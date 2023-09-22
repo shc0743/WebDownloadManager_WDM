@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Web Download Manager</title>
+    <link rel="stylesheet" href="/lib/element-plus/element-ui.css">
+    <link rel="stylesheet" href="./static/site.css">
+    <script type="module" src="./static/el-native-proxy.js"></script>
+    <script type="module" src="./static/userdata.js"></script>
+    <link rel="stylesheet" href="./settings.css">
+    <script type="module" src="./static/i18n.js"></script>
+</head>
+<body>
+
+    <h1 data-i18n=Settings></h1>
+
+    <form id="form">
+
+        <details open>
+            <summary data-i18n="GenericSettings"></summary>
+            <div class="content">
+                <label><input type="checkbox" id="s_etf" /><span data-i18n="Enablenotifications"></span></label>
+                <label><input type="checkbox" id="s_ntf" /><span data-i18n="Senddownloadcompletionnotificationsforalltasks"></span></label>
+                <label><input type="checkbox" id="s_tps" /><span data-i18n="Showrecommendedsbyaccessingyourtopsites"></span></label>
+                <label><input type="checkbox" id="s_bkg" /><span data-i18n="Runextensioninbackground"></span></label>
+            </div>
+        </details>
+
+        <details open>
+            <summary data-i18n="PermissionSettings"></summary>
+            <div class="content">
+                <label><input type="radio" id="s_eap"><span data-i18n-html="enablealloptionalpermissions"></span></label>
+            </div>
+        </details>
+
+        <details open>
+            <summary data-i18n=ContextMenuSettings></summary>
+            <div class="content">
+                <label><input type="radio" name="s_ctxOptions" id="s_noctx"><span data-i18n="ContextMenuSettings_0"></span></label>
+                <label><input type="radio" name="s_ctxOptions" id="s_ctx"><span data-i18n="ContextMenuSettings_1"></span></label>
+                <label><input type="radio" name="s_ctxOptions" id="s_cx2"><span data-i18n="ContextMenuSettings_2"></span></label>
+            </div>
+        </details>
+
+        <details open>
+            <summary data-i18n="LocationSettings"></summary>
+            <div class="content">
+                <label style="display: flex; flex-direction: row-reverse;">
+                    <button type="button" id="dl_location_choose" data-i18n="LocationSettings_choose"></button>
+                    <button type="button" id="dl_location_clear" style="margin-right: 0.5em;" data-i18n="LocationSettings_clear"></button>
+                    <input id="dl_location" readonly value="Loading" style="flex: 1; margin: 0 1em;" />
+                    <span data-i18n="Default_download_location"></span>
+                </label>
+                <label>
+                    <span data-i18n="Systemdownloaderdefaultloction"></span>
+                    <button type="button" id="openSysDlLoc" data-i18n="Open"></button>
+                </label>
+                <hr>
+                <details>
+                    <summary id="slcList_load" data-i18n-title="settings_sl_title" data-i18n="Saved_Locations"></summary>
+                    <div class="content">
+                        <div><span data-i18n="sl_RemoveTip"></span><span> &nbsp; </span><button type="button" id="slcList_clear" data-i18n="sl_RemoveAll"></button></div>
+                        <div id="slcList_placeHolder" style="word-break: break-all;"></div>
+                    </div>
+                </details>
+            </div>
+        </details>
+
+        <details open>
+            <summary data-i18n="StorageSettings"></summary>
+            <div class="content">
+                <label><input type="checkbox" id="s_clr"><span data-i18n-html="clearStorage_bg"></span></label>
+                <label><input type="checkbox" id="s_clr2"><span data-i18n-html="clearStorage_db"></span></label>
+            </div>
+        </details>
+
+        <details>
+            <summary data-i18n=Managements></summary>
+            <div class="content">
+                <button type="button" id="reload" data-i18n="ReloadExtension"></button>
+                <button type="button" id="uninstallSelf" data-i18n="UninstExtension"></button>
+            </div>
+        </details>
+
+    </form>
+
+    <script type="module" src="./settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+{
+  "extName": {
+    "message": "Web 下载管理器",
+    "description": "The name of the extension."
+  },
+  "extDesc": {
+    "message": "一个完全在 Web 浏览器中运行的多线程下载管理器",
+    "description": "The description of the extension."
+  },
+  "userFontFamily": {
+    "message": "'Consolas', 'Courier New', monospace"
+  },
+  "i18nStyle": {
+    "message": "/* i18n styles */\n\n\nhtml, body { direction: ltr; }\n\n"
+  },
+  "ctxMenu_2_title_1": {
+    "message": "下载文件"
+  },
+  "ctxMenu_2_title_2": {
+    "message": "下载图片"
+  },
+  "ctxMenu_2_title_3": {
+    "message": "下载资源"
+  },
+  "ctxMenu_3_title_1": {
+    "message": "运行特定于平台的解析程序"
+  },
+  "ctxMenu_3_title_2": {
+    "message": "为此链接运行特定于平台的解析程序"
+  },
+  "uninstallSelfPrompt": {
+    "message": "您真的要卸载此扩展程序吗?"
+  },
+  "createDownloadTask": {
+    "message": "创建下载任务"
+  },
+  "GenericSettings": {
+    "message": "通用设置"
+  },
+  "Enablenotifications": {
+    "message": " 允许通知"
+  },
+  "Senddownloadcompletionnotificationsforalltasks": {
+    "message": " 为所有任务发送下载完成通知"
+  },
+  "Showrecommendedsbyaccessingyourtopsites": {
+    "message": " 基于您的「热门网站」显示推荐信息"
+  },
+  "Runextensioninbackground": {
+    "message": " 在后台运行此扩展 (例如, 在浏览器关闭后继续下载文件)"
+  },
+  "PermissionSettings": {
+    "message": "权限设置"
+  },
+  "settings_sl_title": {
+    "message": "这些内容是懒渲染的；如果没有内容或出现显示异常，请双击此处"
+  },
+  "Settings": {
+    "message": "设置"
+  },
+  "enablealloptionalpermissions": {
+    "message": " 启用<b style=\"color: red;\">所有</b>可选权限"
+  },
+  "ContextMenuSettings": {
+    "message": "上下文菜单设置"
+  },
+  "ContextMenuSettings_0": {
+    "message": " 不要启用上下文菜单"
+  },
+  "ContextMenuSettings_1": {
+    "message": " 启用上下文菜单"
+  },
+  "ContextMenuSettings_2": {
+    "message": " 启用增强的上下文菜单"
+  },
+  "ReloadExtension": {
+    "message": "重新加载扩展"
+  },
+  "UninstExtension": {
+    "message": "卸载此扩展程序..."
+  },
+  "choosedefaultdownloaddirectory_text2": {
+    "message": "您没有选择保存下载文件的默认位置。点我立即选择该位置。"
+  },
+  "Download": {
+    "message": "下载"
+  },
+  "All_Tasks": {
+    "message": "查看详情"
+  },
+  "Download_Tool": {
+    "message": "下载工具"
+  },
+  "findResource": {
+    "message": "查找页面中的资源"
+  },
+  "crTask_paste_tip": {
+    "message": "按 Shift 再点击此处以重置该功能。"
+  },
+  "crTask_paste0": {
+    "message": "启用自动粘贴"
+  },
+  "crTask_paste1": {
+    "message": "粘贴"
+  },
+  "Filename": {
+    "message": "文件名"
+  },
+  "Save_to": {
+    "message": "保存到"
+  },
+  "dontaskmeagain": {
+    "message": "不再询问"
+  },
+  "Single_thread": {
+    "message": "单线程下载"
+  },
+  "Senddownloadcompletionnotifications": {
+    "message": "发送下载完成通知"
+  },
+  "Usesystemdownloader": {
+    "message": "使用系统下载器"
+  },
+  "Cancel": {
+    "message": "取消"
+  },
+  "Save_to_": {
+    "message": "保存到:"
+  },
+  "Close": {
+    "message": "关闭"
+  },
+  "DefaultLocation": {
+    "message": "默认位置"
+  },
+  "Select_Location___": {
+    "message": "选择位置..."
+  },
+  "advancedOptions": {
+    "message": "高级选项"
+  },
+  "crTask_paste2": {
+    "message": "失败: 在您的剪切板中\n未找到有效的 URL。"
+  },
+  "index_html_Status": {
+    "message": "状态"
+  },
+  "createTask": {
+    "message": "创建任务"
+  },
+  "Operations": {
+    "message": "操作"
+  },
+  "Save_Location": {
+    "message": "保存位置"
+  },
+  "URL": {
+    "message": "URL"
+  },
+  "Time": {
+    "message": "时间"
+  },
+  "explainGlobalSelection": {
+    "message": "[Global Selection] explains\n\n「全局选择」功能说明\n\n「全局选择」是一项允许您修改大量数据的功能。默认情况下，复选框仅影响当前分页中的数据。如果您使用分页组件切换到下一页，您做的选择将不再可用。但是，如果您激活“全局选择”，则无论如何切换页面，都将选中每个数据。如果“全局选择”处于活动状态，则任何多对象操作（如删除）都将影响数据库中的所有数据。例如，如果激活“全局选择”并单击“删除”，则将删除所有数据。分页组件将被忽略。\n\n要激活“全局选择”：\n    当数据列表中未选中所有复选框时，单击我将一次性选中它们。选中所有复选框后，单击我将激活“全局选择”。"
+  },
+  "Delete": {
+    "message": "删除"
+  },
+  "explainGlobalSelectionBox": {
+    "message": "「全局选择」"
+  },
+  "explainexplainGlobalSelection": {
+    "message": "点击这里了解「全局选择」。"
+  },
+  "Findresourcesinothertab": {
+    "message": "查找其他标签页中的资源"
+  },
+  "FindresourcesinothertabTab": {
+    "message": "标签页:"
+  },
+  "FindresourcesinothertabUnselected": {
+    "message": "未选择"
+  },
+  "Findresourcesinothertabselect": {
+    "message": "选择..."
+  },
+  "Parseresourcesinlink": {
+    "message": "对指定 URL 运行特定于平台的解析程序"
+  },
+  "dtParse": {
+    "message": "解析"
+  },
+  "OK": {
+    "message": "确定"
+  },
+  "resources_init_placeholder": {
+    "message": "单击上面的按钮以查找页面中的资源。"
+  },
+  "friot_empty_string": {
+    "message": "未找到资源"
+  },
+  "LocationSettings": {
+    "message": "位置设置"
+  },
+  "LocationSettings_choose": {
+    "message": "选择"
+  },
+  "LocationSettings_clear": {
+    "message": "清除"
+  },
+  "Default_download_location": {
+    "message": "下载内容默认保存位置:"
+  },
+  "Systemdownloaderdefaultloction": {
+    "message": "系统下载器默认保存位置:"
+  },
+  "Saved_Locations": {
+    "message": "保存的位置"
+  },
+  "sl_RemoveTip": {
+    "message": "单击以下列表中的项目以将其从“保存的位置”中删除"
+  },
+  "sl_RemoveAll": {
+    "message": "移除所有"
+  },
+  "StorageSettings": {
+    "message": "存储设置"
+  },
+  "clearStorage_bg": {
+    "message": " 清除<b style=\"color: blue\">扩展程序后台存储区域</b>中的<b style=\"color: red;\">所有</b>数据"
+  },
+  "clearStorage_db": {
+    "message": " 删除<b style=\"color: blue\">扩展程序存储区域</b>中的<b style=\"color: red;\">所有数据库</b>"
+  },
+  "Managements": {
+    "message": "管理"
+  },
+  "Open": {
+    "message": "打开"
+  },
+  "dtParsing": {
+    "message": "正在解析..."
+  },
+  "d_Start": {
+    "message": "开始"
+  },
+  "d_PauseResume": {
+    "message": "暂停"
+  },
+  "d_Stop": {
+    "message": "停止"
+  },
+  "d_Cancel": {
+    "message": "取消"
+  },
+  "platformParse_supportedPlatforms": {
+    "message": "支持的平台"
+  },
+  "index_html_Progress": {
+    "message": "进度"
+  },
+  "videoDownload_choosequality": {
+    "message": "选择清晰度"
+  },
+  "videoDownload_choosequality_q": {
+    "message": "清晰度: "
+  }
+}

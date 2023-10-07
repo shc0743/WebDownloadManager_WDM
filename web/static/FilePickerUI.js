@@ -24,13 +24,14 @@ export class FilePicker {
         return new Promise((resolve, reject) => {
             const randomId = (new Date().getTime()) + '_' + Math.floor(1e8 * Math.random());
             params.searchParams.set('id', randomId);
-            let ePicker = null;
+            let ePicker = null, check_id = -1;
             const message_handler = async (ev) => {
                 if (ev.origin !== location.origin) return;
                 if (ev.data?.id !== randomId) return;
                 const key = ev.data.value;
                 const value = await userdata.get('temp', key);
                 await userdata.delete('temp', key);
+                clearInterval(check_id);
                 window.removeEventListener('message', message_handler);
                 resolve(value);
                 setTimeout(() => ((ePicker.onbeforeunload = null), ePicker.close()), 10);
@@ -38,8 +39,11 @@ export class FilePicker {
             window.addEventListener('message', message_handler);
 
             ePicker = window.open(params, '_blank', 'width=320,height=200');
-            setInterval(() => {
-                if (ePicker.closed) reject('Cancelled');
+            check_id = setInterval(() => {
+                if (ePicker.closed) {
+                    clearInterval(check_id);
+                    reject('Cancelled');
+                }
             }, 100);
         });
     }

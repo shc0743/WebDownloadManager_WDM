@@ -50,7 +50,15 @@ coreMessageHandler.platform_parse = function platform_parse(message, sender, sen
 coreMessageHandler.get_ext_gateway_url = function get_ext_gateway_url(message, sender, sendResponse) {
     try {
         const url = new URL(message.data.url);
-        const serviceName = url.pathname.substring(2);
+        const serviceName = url.host + url.pathname 
+        /* 2024-12-7 Fix a bug that was caused by a behavior change in URL Object in new Chromium
+        Before: URL(ext://downloader/foo).pathname == '//downloader/foo'
+                URL(ext://downloader/foo).host     == ''
+            * Seen in Chromium 122  (360se)
+        After : URL(ext://downloader/foo).pathname == '/foo'
+                URL(ext://downloader/foo).host     == 'downloader'
+            * Seen in Chromium 131  (chrome latest)
+        */
         const serviceUrl = '/ext/' + serviceName + '.html';
         const finalUrl = new URL(serviceUrl, location.href);
         finalUrl.search = url.search;
